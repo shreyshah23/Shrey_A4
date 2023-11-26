@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Invoices</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>All Invoices</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice ID</th>
+                <th>Image</th>
+                <th>Manufacturer</th>
+                <th>Class</th>
+                <th>Sales in thousands</th>
+                <th>__year_resale_value</th>
+                <th>Vehicle_type</th>
+                <!-- Add other table headers as needed -->
+                <th>Price_in_thousands</th>
+                <th>Engine_size</th>
+                <th>Horsepower</th>
+                <th>Wheelbase</th>
+                <th>Width</th>
+                <th>Length</th>
+                <th>Curb_weight</th>
+                <th>Fuel_capacity</th>
+                <th>Fuel_efficiency</th>
+                <th>Latest_Launch</th>
+                <th>Power_perf_factor</th>
+                <!-- Add other table headers as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {{#each storeSales}}
+                <tr>
+                    <td>{{InvoiceNo}}</td>
+                    <td>{{image}}</td>
+                    <td>{{Manufacturer}}</td>
+                    <td>{{class}}</td>
+                    <td>{{Sales_in_thousands}}</td>
+                    <td>{{__year_resale_value}}</td>
+                    <td>{{Vehicle_type}}</td>
+                    <!-- Display other fields -->
+                    <td>{{Price_in_thousands}}</td>
+                    <td>{{Engine_size}}</td>
+                    <td>{{Horsepower}}</td>
+                    <td>{{Wheelbase}}</td>
+                    <td>{{Width}}</td>
+                    <td>{{Length}}</td>
+                    <td>{{Curb_weight}}</td>
+                    <td>{{Fuel_capacity}}</td>
+                    <td>{{Fuel_efficiency}}</td>
+                    <td>{{Latest_Launch}}</td>
+                    <td>{{Power_perf_factor}}</td>
+                    <!-- Display other fields -->
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>
